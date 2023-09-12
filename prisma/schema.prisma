@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// The Profile model represents a user profile
+model Profile {
+  id String @id @default(uuid()) // Unique identifier for the profile
+  userId String @unique // Unique identifier for the associated user
+  name String // Name of the user
+  imageUrl String @db.Text // URL of the user's profile image
+  email String @db.Text // Email of the user
+  createAt DateTime @default(now()) // Date and time when the profile was created
+  updatedAt DateTime @updatedAt // Date and time when the profile was last updated
+
+  channel Channel[] // Channel associated with the profile
+  server Server[] // Servers associated with the profile
+  member Member[] // Member associated with the profile
+}
+
+model Server {
+  id String @id @default(uuid()) // Unique identifier for the server
+  name String // Name of the server
+  imageUrl String @db.Text // URL of the server's image
+  inviteCode String @db.Text // Invite code for the server
+  createAt DateTime @default(now()) // Date and time when the profile was created
+  updatedAt DateTime @updatedAt // Date and time when the profile was last updated
+
+  member Member[]
+  channel Channel[] 
+  profileId String // Foreign key to the associated profile
+
+  profile Profile @relation(fields: [profileId],references: [id],onDelete: Cascade) // Profile associated with the server
+  @@index([profileId]) // Index on the profileId field for faster queries
+}
+
+enum MemberRole {
+  ADMIN
+  MODERATOR
+  GUEST
+} //* This code snippet defines an enumeration called MemberRole with three possible values: ADMIN, MODERATOR, and GUEST. It allows you to represent different roles that a member can have in a system.
+
+model Member{
+  id String @id @default(uuid())
+  role MemberRole @default(GUEST) //By default a user become an guest.
+
+  profileId String // The same process will do again 
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  // We also member server in which user is accocited: So we can know what role user have in the server
+
+  serverId String
+  server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
+
+  @@index([serverId])
+  @@index([profileId])
+}
+
+enum ChannelType{
+  TEXT 
+  AUDIO 
+  VIDEO
+} // We will define channel types within Discord
+
+model Channel{
+  id String @id @default(uuid())
+  name String
+  type ChannelType @default(TEXT) // It means when user create a new channel in the chat by default the Chat type is Text.
+  createAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
+
+  profileId String 
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  serverId String
+  server Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
+
+  
+  @@index([serverId])
+  @@index([profileId])
+}
