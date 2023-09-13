@@ -42,6 +42,22 @@ Get started commit of alfarnex startup agency website
 
 ### Commit details
 
+Here is some important steps and commands that can help me in the future usecase: 
+
+Prequisnaries: 
+
+- First make sure to create an database in Planescale.
+
+
+``` 
+npm init -y
+npm install prisma typescript ts-node @types/node --save-dev
+npm install @prisma/client 
+npx prisma db push 
+npx prisma studio
+```
+
+
 
 ### Authors
 - Fardeen Founder of Alfarnex
