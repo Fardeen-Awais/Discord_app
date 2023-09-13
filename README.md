@@ -5,6 +5,11 @@ Get started commit of alfarnex startup agency website
 
 ### Future Helps 
 
+    - Authentication and Theme configuration ([commit 2e20e1c6829c6442b5038342fd92ab2732fef344](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/2e20e1c6829c6442b5038342fd92ab2732fef344))
+
+    - Installing Primsa & Prisma Client and making Schemas ([commit https://github.com/Fardeen-Awais/Discord_app/commit/cbf16fe9285d871dd06eb6dcfc035cc37ce1a41e](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/cbf16fe9285d871dd06eb6dcfc035cc37ce1a41e))
+
+
 ### Built With
 
     Next.js - Full stack development framework 
@@ -31,22 +36,12 @@ Get started commit of alfarnex startup agency website
     - Prices []
     - Testimonials []
     - Footer []
-- Auth with cleric [x]
+- Auth with Cleric [x]
 - Connect planetscale to Prisma [x]
-
+- Making the Model - []
 
 ### Commit details
 
-    The import info about how we create and use some different commands in prisma.
-    
-    We first setup prisma and install it. Second we create planetscale and connect it to our prisma. 
-    Planescale provide a url that help you to connect with your database. 
-
-    We add it to our env file. For creating the schema make sure you use .env not .env.local
-
-    > Aftar we install Prisma Cli 
-    > npx prisma generate - This command generate the schemas
-    > npx prisma db push - This command push the changes
 
 ### Authors
 - Fardeen Founder of Alfarnex
