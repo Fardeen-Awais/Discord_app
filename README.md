@@ -38,25 +38,34 @@ Get started commit of alfarnex startup agency website
     - Footer []
 - Auth with Cleric [x]
 - Connect planetscale to Prisma [x]
-- Making the Model - []
+- Making the Model - [x]
 
 ### Commit details
 
 Here is some important steps and commands that can help me in the future usecase: 
 
-Prequisnaries: 
+Installation: 
 
-- First make sure to create an database in Planescale.
-
+We are going to make Dialog. So we install some components from shadcn. We install input, dilog and form 
+that use react hook form.
 
 ``` 
-npm init -y
-npm install prisma typescript ts-node @types/node --save-dev
-npm install @prisma/client 
-npx prisma db push 
-npx prisma studio
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add dialog
+npx shadcn-ui@latest add form
 ```
 
+
+First we install all the ui packages. But also we also need to work with forms. 
+
+So, we need to install : 
+
+```yarn add react-hook-form```
+
+
+By installing that you also will got build-in zod library. If it its not in case you can install it manually. It is used for form authorization.
+
+```yarn add zod```
 
 
 ### Authors

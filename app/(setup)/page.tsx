@@ -3,6 +3,7 @@ import { intialProfile } from '@/lib/initial-profile'
 import { db } from '@/lib/db'
 import { redirect } from 'next/navigation'
 import { UserButton } from "@clerk/nextjs";
+import InitialModel from '@/components/modals/InitialModel';
 
 const SetupPage = async () => {
   // Fetch initial profile data
@@ -24,13 +25,7 @@ const SetupPage = async () => {
     redirect(`/servers/${server.id}`)
   }
 
-  return (
-    <div>
-      Create am setup
-
-      {/* Display a user button component */}
-      <UserButton afterSignOutUrl="/"/>
-    </div>
+  return ( <InitialModel/>
   )
 }
 
