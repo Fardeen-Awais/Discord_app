@@ -9,6 +9,8 @@ Get started commit of alfarnex startup agency website
 
     - Installing Primsa & Prisma Client and making Schemas ([commit https://github.com/Fardeen-Awais/Discord_app/commit/cbf16fe9285d871dd06eb6dcfc035cc37ce1a41e](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/cbf16fe9285d871dd06eb6dcfc035cc37ce1a41e))
 
+    - Server Modal Form Ui ([commit https://github.com/Fardeen-Awais/Discord_app/commit/e424072](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/e424072))
+
 
 ### Built With
 
@@ -22,20 +24,6 @@ Get started commit of alfarnex startup agency website
 ### Objectives 
 
 - Installing with dark mode and light mode [x]
-    - Header [x]
-        - logo [x]
-        - Blured [x]
-        - Navlink [x]
-        - Theme changer [x]
-        - Language translator [x]
-        - Login []
-    - Hero [x]
-    - Our Story [x]
-    - Services [x]
-    - How we work []
-    - Prices []
-    - Testimonials []
-    - Footer []
 - Auth with Cleric [x]
 - Connect planetscale to Prisma [x]
 - Making the Model - [x]
