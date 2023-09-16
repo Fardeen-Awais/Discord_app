@@ -1,7 +1,8 @@
-// TODO: First you need to commit it as you make the modal the Ui and second make the docs of it how you make it. Observer Each steps tommorow.
+// TODO: Tommorow we will start from making the server api which send data of the user to the discord as well!.
 'use client'
 
 import * as zod from "zod";
+import axios from "axios"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from 'react-hook-form'
 import { Button } from '../ui/button';
@@ -10,6 +11,7 @@ import React, { useEffect, useState } from 'react'
 import { Dialog, DialogContent, DialogFooter, DialogDescription, DialogTitle, DialogTrigger, DialogHeader } from '../ui/dialog'
 import { Form, FormControl, FormItem, FormLabel, FormMessage, FormField } from '../ui/form';
 import FileUpload from "../ui/fileUpload";
+import { useRouter } from "next/navigation";
 
 
 export const formSchema = zod.object({
@@ -23,6 +25,7 @@ export const formSchema = zod.object({
 
 const InitialModel = () => {
   const [isMounted, setIsMounted] = useState(false) // By setting isMounted to false initially and then setting it to true in the useEffect hook, the component returns null if it hasn't been mounted yet. This ensures that the component is not rendered on the server and avoids the hydration error. Once the component is mounted on the client, it will be rendered as usual.
+  const router = useRouter()
 
   useEffect(() => {
     setIsMounted(true)
@@ -39,7 +42,14 @@ const InitialModel = () => {
   const isLoading = form.formState.isSubmitting // It is likely used to track whether a form is currently being submitted or not.
 
   const onSubmit = async (values: zod.infer<typeof formSchema>) => {
-    console.log(values)
+    try{
+      await axios.post("/api/server", values)
+      form.reset()
+      router.refresh()
+      window.location.reload() 
+    }catch(err){
+      console.log(err)
+    }
   }
 
   if (!isMounted) {
