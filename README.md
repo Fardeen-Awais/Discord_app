@@ -11,8 +11,12 @@ Get started commit of alfarnex startup agency website
 
     - Server Modal Form Ui ([commit https://github.com/Fardeen-Awais/Discord_app/commit/e424072](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/e424072))
 
+    - Upload Image with uploadthing library ([commit https://github.com/Fardeen-Awais/Discord_app/commit/0fcb89dfaff221cb5e3648aec4d8ba943a65b613](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/0fcb89dfaff221cb5e3648aec4d8ba943a65b613))
 
-### Built With
+    - Creating Server Creation Api ([commit https://github.com/Fardeen-Awais/Discord_app/commit/de53bf8](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/de53bf8))
+
+
+### Built With 
 
     Next.js - Full stack development framework 
     React-icons - A react library for icons
@@ -30,30 +34,6 @@ Get started commit of alfarnex startup agency website
 
 ### Commit details
 
-Here is some important steps and commands that can help me in the future usecase: 
-
-Installation: 
-
-We are going to make Dialog. So we install some components from shadcn. We install input, dilog and form 
-that use react hook form.
-
-``` 
-npx shadcn-ui@latest add input
-npx shadcn-ui@latest add dialog
-npx shadcn-ui@latest add form
-```
-
-
-First we install all the ui packages. But also we also need to work with forms. 
-
-So, we need to install : 
-
-```yarn add react-hook-form```
-
-
-By installing that you also will got build-in zod library. If it its not in case you can install it manually. It is used for form authorization.
-
-```yarn add zod```
 
 
 ### Authors
