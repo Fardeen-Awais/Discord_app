@@ -24,6 +24,12 @@ Get started commit of alfarnex startup agency website
     React-icon - Best icons library [https://react-icons.github.io/react-icons/icons?name=di]
     Prisma - The database Orm
     PlanetScale - A scalable mySql database
+    Clerk - User Authentication 
+    Axios - A library for http response
+    React hook form - For using form submission
+    zod - A library used for form validation 
+    uploadingthing - It basically used to upload my image
+    Zustand - A simple State Manager
 
 ### Objectives 
 
@@ -31,10 +37,12 @@ Get started commit of alfarnex startup agency website
 - Auth with Cleric [x]
 - Connect planetscale to Prisma [x]
 - Making the Model - [x]
+- Navigation Bar of Discord - [x]
+- Creating the model of Discord server - []
 
 ### Commit details
 
-
+Timestamps: 2:56:25
 
 ### Authors
 - Fardeen Founder of Alfarnex

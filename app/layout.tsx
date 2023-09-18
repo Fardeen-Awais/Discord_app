@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/providers/Theme-Provider'
 import { cn } from '@/lib/utils'
+import ModelProvider from '@/providers/modal-provider'
 
 const font = Open_Sans({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={cn(font.className,'bg-white dark:bg-[#313338]')}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <ModelProvider/>
             {children}
           </ThemeProvider>
         </body>
