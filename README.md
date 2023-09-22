@@ -17,6 +17,8 @@ Get started commit of alfarnex startup agency website
    
 - Server sidebar completed ✨ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/81a3cd6](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/81a3cd6))
 
+- Inviting functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/4bc55b9](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/https://github.com/Fardeen-Awais/Discord_app/commit/4bc55b9))
+
 
 ### Built With 
 
