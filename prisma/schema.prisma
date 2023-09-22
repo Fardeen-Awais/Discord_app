@@ -27,7 +27,7 @@ model Server {
   id String @id @default(uuid()) // Unique identifier for the server
   name String // Name of the server
   imageUrl String @db.Text // URL of the server's image
-  inviteCode String @db.Text // Invite code for the server
+  inviteCode String @unique // Invite code for the server
   createAt DateTime @default(now()) // Date and time when the profile was created
   updatedAt DateTime @updatedAt // Date and time when the profile was last updated
 
