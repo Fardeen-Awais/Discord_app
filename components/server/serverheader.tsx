@@ -33,8 +33,8 @@ function ServerHeader({server,role}:ServerHeaderProps) {
           </DropdownMenuItem>
         )}
         {isAdmin && (
-          <DropdownMenuItem className=''>
-            Server Setting
+          <DropdownMenuItem onClick={()=>onOpen("editServer",{server:server})} className=''>
+            Server Setting 
             <SettingsIcon className='w-4 h-4 ml-auto'/>
           </DropdownMenuItem>
         )}
