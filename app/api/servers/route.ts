@@ -21,7 +21,7 @@ export async function POST(req: Request) {
                 inviteCode: uuidv4(),
                 channel: {
                     create: { name: "general", profileId: profile.id }
-                },
+                }, // We create Default general Channel here that why we see its data in prisma by default 
                 member: {
                     create: { profileId: profile.id, role: MemberRole.ADMIN }
                 }

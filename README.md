@@ -21,6 +21,8 @@ Get started commit of alfarnex startup agency website
 
 - Edit Server Setting functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/6e88c91](https://github.com/Fardeen-Awais/Discord_app/commit/6e88c91))
 
+-  Manage Member: Role Promotion and kick functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/33526d0](https://github.com/Fardeen-Awais/Discord_app/commit/33526d0))
+
 
 ### Built With 
 
@@ -36,6 +38,7 @@ Get started commit of alfarnex startup agency website
     zod - A library used for form validation 
     uploadingthing - It basically used to upload my image
     Zustand - A simple State Manager
+    query-string - Used for query from the URL
 
 ### Objectives 
 

@@ -45,7 +45,7 @@ function ServerHeader({server,role}:ServerHeaderProps) {
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className=''>
+          <DropdownMenuItem onClick={() => onOpen("createChannel",{server:server})} className=''>
             Create Channel
             <PlusCircle className='w-4 h-4 ml-auto'/>
           </DropdownMenuItem>
