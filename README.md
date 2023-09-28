@@ -19,6 +19,8 @@ Get started commit of alfarnex startup agency website
 
 - Inviting functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/4bc55b99ef198b633ff50cf8e51c5d678618b8fa](https://github.com/Fardeen-Awais/Discord_app/commit/4bc55b99ef198b633ff50cf8e51c5d678618b8fa))
 
+- Edit Server Setting functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/6e88c91](https://github.com/Fardeen-Awais/Discord_app/commit/6e88c91))
+
 
 ### Built With 
 

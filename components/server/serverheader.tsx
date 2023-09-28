@@ -39,7 +39,7 @@ function ServerHeader({server,role}:ServerHeaderProps) {
           </DropdownMenuItem>
         )}
         {isAdmin && (
-          <DropdownMenuItem className=''>
+          <DropdownMenuItem onClick={() => onOpen("members",{server:server})} className=''>
             Manage Members
             <Users className='w-4 h-4 ml-auto'/>
           </DropdownMenuItem>
