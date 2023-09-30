@@ -23,6 +23,8 @@ Get started commit of alfarnex startup agency website
 
 -  Manage Member: Role Promotion and kick functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/33526d0](https://github.com/Fardeen-Awais/Discord_app/commit/33526d0))
 
+-  Completed delete and leave functionality ✅ ([commit https://github.com/Fardeen-Awais/Discord_app/commit/a303b74](https://github.com/Fardeen-Awais/Discord_app/commit/a303b74))
+
 
 ### Built With 
 
