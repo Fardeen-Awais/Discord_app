@@ -53,7 +53,6 @@ Get started commit of alfarnex startup agency website
 
 ### Commit details
 
-Timestamps: 2:56:25
 
 ### Authors
 - Fardeen Founder of Alfarnex

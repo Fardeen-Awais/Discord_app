@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from 'react-hook-form'
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Dialog, DialogContent, DialogFooter, DialogTitle,  DialogHeader } from '../ui/dialog'
 import { Form, FormControl, FormItem, FormLabel, FormMessage, FormField } from '../ui/form';
 import { useRouter } from "next/navigation";
@@ -30,21 +30,30 @@ export const formSchema = zod.object({
 }) // Revalidation
 
 const CreateChannelModal = () => {
-  const {isOpen , onClose , type} = useModalStore()
+  const {isOpen , onClose , type, data} = useModalStore()
 
   const isModalOpen = isOpen && type === "createChannel"
 
   const router = useRouter()
   const params = useParams()
-
+  const {channelType} = data;
+  console.log("🚀 ~ file: createChannelmodal.tsx:40 ~ CreateChannelModal ~  channelType:",  channelType)
   const form = useForm({
     resolver: zodResolver(formSchema), //* We add schmas here
     defaultValues: {
       name: "",
-      type:ChannelType.TEXT
+      type: channelType || ChannelType.TEXT,
     }
   })
-
+  console.log("🚀 ~ file: createChannelmodal.tsx:48 ~ CreateChannelModal ~ form:", form)
+  
+  useEffect(() => {
+    if(channelType){
+      form.setValue("type",channelType)
+    } else{
+      form.setValue("type",ChannelType.TEXT )
+    }
+  },[channelType,form]) // Useeffect dependencies has value props and state. ChannelType is props and channelType is state. This useeffect will work when these two will change
   const isLoading = form.formState.isSubmitting // It is likely used to track whether a form is currently being submitted or not.
 
   const onSubmit = async (values: zod.infer<typeof formSchema>) => {
