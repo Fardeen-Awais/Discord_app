@@ -53,6 +53,7 @@ Get started commit of alfarnex startup agency website
 
 ### Commit details
 
+TODO: fix channel delete functionality
 
 ### Authors
 - Fardeen Founder of Alfarnex

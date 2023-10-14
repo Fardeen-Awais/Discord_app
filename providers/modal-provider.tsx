@@ -7,6 +7,7 @@ import DeleteServerModal from "@/components/modals/deleteServerModal"
 import EditServerModal from "@/components/modals/edit-server-modal"
 import InviteModal from "@/components/modals/invite-modal"
 import MemberModal from "@/components/modals/members-modal"
+import DeleteChannelModal from "@/components/modals/deleteChannelModal"
 
 const ModelProvider = () => {
     const [isMounted, setIsMounted] = useState(false)
@@ -28,6 +29,7 @@ const ModelProvider = () => {
             <CreateChannelModal/>
             <LeaveServerModal/>
             <DeleteServerModal/>
+            <DeleteChannelModal/>
         </>
     )
 }

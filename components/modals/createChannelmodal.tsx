@@ -37,7 +37,6 @@ const CreateChannelModal = () => {
   const router = useRouter()
   const params = useParams()
   const {channelType} = data;
-  console.log("🚀 ~ file: createChannelmodal.tsx:40 ~ CreateChannelModal ~  channelType:",  channelType)
   const form = useForm({
     resolver: zodResolver(formSchema), //* We add schmas here
     defaultValues: {
@@ -45,7 +44,6 @@ const CreateChannelModal = () => {
       type: channelType || ChannelType.TEXT,
     }
   })
-  console.log("🚀 ~ file: createChannelmodal.tsx:48 ~ CreateChannelModal ~ form:", form)
   
   useEffect(() => {
     if(channelType){
