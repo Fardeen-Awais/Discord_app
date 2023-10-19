@@ -21,11 +21,11 @@ const ChannelIdPage = async({params}:ChannelIdPageProps)=>{
     const member = await db.member.findFirst({
         where:{serverId:params.serverId,profileId:profile.id}
     })
-    if(!channel || !member){
+    if(!channel || !member){ 
         redirect("/")
     }
     return(
-        <div className="bg-white dark:bg-[#313338] flex flex-col w-full">
+        <div className="bg-white dark:bg-[#323335] flex flex-col w-screen md:w-[450px] overflow-hidden">
             <ChatHeader name={channel.name} serverId={channel.serverId} type="channel" />
         </div>
     )

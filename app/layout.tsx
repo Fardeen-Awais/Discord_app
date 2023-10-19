@@ -5,6 +5,7 @@ import { Open_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/providers/Theme-Provider'
 import { cn } from '@/lib/utils'
 import ModelProvider from '@/providers/modal-provider'
+import { SocketProvider } from '@/providers/Socket-Provider'
 
 const font = Open_Sans({ subsets: ['latin'] })
 
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(font.className,'bg-white dark:bg-[#313338]')}>
+        <body className={cn(font.className, 'bg-white dark:bg-[#313338]')}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <ModelProvider/>
-            {children}
+            <SocketProvider>
+              <ModelProvider />
+              {children}
+            </SocketProvider>
           </ThemeProvider>
         </body>
       </html>
