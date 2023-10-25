@@ -3,6 +3,7 @@ import { redirectToSignIn } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
 import ChatHeader from "@/components/chat/Chat-header";
+import ChatInput from "@/components/chat/ChatInput";
 interface ChannelIdPageProps{
     params:{
         serverId:string;
@@ -25,8 +26,12 @@ const ChannelIdPage = async({params}:ChannelIdPageProps)=>{
         redirect("/")
     }
     return(
-        <div className="bg-white dark:bg-[#323335] flex flex-col w-screen md:w-[450px] overflow-hidden">
+        <div className="bg-white dark:bg-[#323335] flex flex-col h-screen ">
             <ChatHeader name={channel.name} serverId={channel.serverId} type="channel" />
+            <div className="flex-1">
+                Message here
+            </div>
+            <ChatInput name={channel.name} type="channel" apiUrl="/api/socket/messages" query={{channelId:channel.id, serverId:channel.serverId, }}/>
         </div>
     )
 }
