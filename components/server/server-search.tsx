@@ -33,10 +33,10 @@ const ServerSearch = (data: ServerSidebarProps) => {
 
     const onClick = ({id,type}:{id:string,type:'channel'|'member'}) => {
         if(type === 'member' ){
-            router.push(`/servers/${param.serverId}/conversation/${id}`) // if type member we will user send it to the route of the selected member for one to one conversation.
+            router.push(`/servers/${param?.serverId}/conversation/${id}`) // if type member we will user send it to the route of the selected member for one to one conversation.
         }
         if(type === 'channel' ){
-            router.push(`/servers/${param.serverId}/channels/${id}`) // if type channel we will user send it to the route of the selected channel.
+            router.push(`/servers/${param?.serverId}/channels/${id}`) // if type channel we will user send it to the route of the selected channel.
         }
     }
     return (
