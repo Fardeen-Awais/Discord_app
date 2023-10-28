@@ -10,8 +10,7 @@ interface EmojiPicker {
 }
 const EmojiPicker = ({onChange}:EmojiPicker) => {
     const {resolvedTheme } = useTheme(); 
-    console.log("🚀 ~ file: emoji-picker.tsx:13 ~ EmojiPicker ~ resolvedTheme:", resolvedTheme)
-
+    
   return (
     <Popover>
         <PopoverTrigger>
