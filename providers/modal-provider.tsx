@@ -9,6 +9,7 @@ import InviteModal from "@/components/modals/invite-modal"
 import MemberModal from "@/components/modals/members-modal"
 import DeleteChannelModal from "@/components/modals/deleteChannelModal"
 import EditChannelModal from "@/components/modals/editChannelModal"
+import MessageFileModal from "@/components/modals/message-File-modal"
 
 
 const ModelProvider = () => {
@@ -33,6 +34,7 @@ const ModelProvider = () => {
             <DeleteServerModal/>
             <DeleteChannelModal/>
             <EditChannelModal/>
+            <MessageFileModal/>
         </>
     )
 }
