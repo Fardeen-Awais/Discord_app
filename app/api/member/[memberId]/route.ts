@@ -58,7 +58,7 @@ export async function DELETE(
     }
   }
 
-export async function PATH(req: Request, {params}:{params:{memberId:string}}){
+export async function PATCH(req: Request, {params}:{params:{memberId:string}}){
 
     try {
         const profile = await currentProfile();
