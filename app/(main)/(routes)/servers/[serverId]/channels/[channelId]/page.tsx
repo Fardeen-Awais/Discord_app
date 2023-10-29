@@ -4,34 +4,44 @@ import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
 import ChatHeader from "@/components/chat/Chat-header";
 import ChatInput from "@/components/chat/ChatInput";
-interface ChannelIdPageProps{
-    params:{
-        serverId:string;
-        channelId:string;
+import ChatMessage from "@/components/chat/ChatMessage";
+interface ChannelIdPageProps {
+    params: {
+        serverId: string;
+        channelId: string;
     }
 }
 
-const ChannelIdPage = async({params}:ChannelIdPageProps)=>{
+const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
     const profile = await currentProfile()
-    if(!profile){
+    if (!profile) {
         return redirectToSignIn()
     }
     const channel = await db.channel.findUnique({
-        where:{id:params.channelId,}
-    }) 
-    const member = await db.member.findFirst({
-        where:{serverId:params.serverId,profileId:profile.id}
+        where: { id: params.channelId, }
     })
-    if(!channel || !member){ 
+    const member = await db.member.findFirst({
+        where: { serverId: params.serverId, profileId: profile.id }
+    })
+    if (!channel || !member) {
         redirect("/")
     }
-    return(
+    return (
         <div className="bg-white dark:bg-[#323335] flex flex-col h-screen ">
             <ChatHeader name={channel.name} serverId={channel.serverId} type="channel" />
             <div className="flex-1">
-                Message here
+                <ChatMessage
+                    member={member}
+                    name={channel.name}
+                    chatId={channel.id}
+                    type="channel"
+                    apiUrl="/api/messages"
+                    socketUrl="/api/socket/messages"
+                    socketQuery={{ channelId: channel.id, serverId: channel.serverId, }}paramKey="channelId"
+                    paramValue={channel.id}  
+                />
             </div>
-            <ChatInput name={channel.name} type="channel" apiUrl="/api/socket/messages" query={{channelId:channel.id, serverId:channel.serverId, }}/>
+            <ChatInput name={channel.name} type="channel" apiUrl="/api/socket/messages" query={{ channelId: channel.id, serverId: channel.serverId, }} />
         </div>
     )
 }

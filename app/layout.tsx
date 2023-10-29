@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/providers/Theme-Provider'
 import { cn } from '@/lib/utils'
 import ModelProvider from '@/providers/modal-provider'
 import { SocketProvider } from '@/providers/Socket-Provider'
+import { QueryProvider } from '@/providers/query-provider'
 
 const font = Open_Sans({ subsets: ['latin'] })
 
@@ -26,7 +27,9 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <SocketProvider>
               <ModelProvider />
-              {children}
+              <QueryProvider>
+                {children}
+              </QueryProvider>
             </SocketProvider>
           </ThemeProvider>
         </body>
