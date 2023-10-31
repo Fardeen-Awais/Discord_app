@@ -18,10 +18,9 @@ export default async function handler(
     const { content,  fileUrl } = req.body;
     const { serverId, channelId } = req.query;
 
-    console.log("🚀 ~ file: messages.ts:18 ~ content:", content)
-    console.log("🚀 ~ file: messages.ts:20 ~ channelId:", channelId)
-    console.log("🚀 ~ file: messages.ts:20 ~ serverId:", serverId)
-    console.log("🚀 ~ file: messages.ts:18 ~ fileUrl:", fileUrl)
+    console.log("🚀 ~ file: messages.ts:21 ~ content:", content)
+    console.log("🚀 ~ file: messages.ts:22 ~ channelId:", channelId)
+    console.log("🚀 ~ file: messages.ts:23 ~ serverId:", serverId)
     
     if (!profile) {
       return res.status(401).json({ error: "Unauthorized" });
