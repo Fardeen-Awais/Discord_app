@@ -79,7 +79,7 @@ const EditChannelModal = () => {
   return (
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       {/* Dialog content */}
-      <DialogContent className='flex flex-col justify-center items-center bg-white text-black p-1 overflow-hidden w-80'>
+      <DialogContent className='flex flex-col justify-center items-center bg-white text-black p-1 overflow-hidden w-full'>
         <DialogHeader className='pt-8 px-6 p-5 '>
           {/* Dialog title */}
           <DialogTitle className='text-2xl text-center font-bold'>

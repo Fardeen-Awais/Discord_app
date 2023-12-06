@@ -7,11 +7,10 @@ import { Loader2, ServerCrash } from "lucide-react";
 
 import { useChatQuery } from "@/hook/use-chat-query";
 import { useChatSocket } from "@/hook/use-chat-socket";
-// import { useChatScroll } from "@/hooks/use-chat-scroll";
+import { useChatScroll } from "@/hook/use-Chat-scroll";
 
 import ChatWelcome from "./Chat-Welcome";
-import ChatItem from "./ChatItem";
-import { useChatScroll } from "@/hook/use-Chat-scroll";
+import { ChatItem } from "./ChatItem";
 
 const DATE_FORMAT = "d MMM yyyy, HH:mm";
 
@@ -33,7 +32,7 @@ interface ChatMessagesProps {
   type: "channel" | "conversation";
 }
 
-const ChatMessages = ({
+export const ChatMessages = ({
   name,
   member,
   chatId,
@@ -129,7 +128,7 @@ const ChatMessages = ({
                 content={message.content}
                 fileUrl={message.fileUrl}
                 deleted={message.deleted}
-                timestamps={format(new Date(message.createdAt), DATE_FORMAT)}
+                timestamp={format(new Date(message.createdAt), DATE_FORMAT)}
                 isUpdated={message.updatedAt !== message.createdAt}
                 socketUrl={socketUrl}
                 socketQuery={socketQuery}
@@ -142,5 +141,3 @@ const ChatMessages = ({
     </div>
   )
 }
-
-export default ChatMessages
