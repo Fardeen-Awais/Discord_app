@@ -10,6 +10,7 @@ datasource db {
 
 // The Profile model represents a user profile
 model Profile {
+  
   id String @id @default(uuid()) // Unique identifier for the profile
   userId String @unique // Unique identifier for the associated user
   name String // Name of the user
