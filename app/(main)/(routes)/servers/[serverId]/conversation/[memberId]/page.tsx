@@ -7,6 +7,7 @@ import { currentProfile } from "@/lib/current-profile";
 import ChatHeader from "@/components/chat/Chat-header";
 import { ChatMessages } from "@/components/chat/ChatMessage";
 import ChatInput from "@/components/chat/ChatInput";
+import { MediaRoom } from "@/components/media-room";
 // import MediaRoo
 
 interface MemberIdPageProps {
@@ -54,7 +55,7 @@ const MemberIdPage = async ({
   const otherMember = memberOne.profileId === profile.id ? memberTwo : memberOne;
 
   return ( 
-  <div className="bg-white dark:bg-[#313338] flex flex-col ch-full">
+  <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
       <ChatHeader
         imageUrl={otherMember.profile.imageUrl}
         name={otherMember.profile.name}

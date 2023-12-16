@@ -33,28 +33,28 @@ export const useChatScroll = ({
          }
      ,[chatRef, shouldLoadMore, loadMore, count])
 
-     useEffect(()=>{
-         const bottomDiv = bottomRef?.current;
-         const topDiv = chatRef?.current;
+    //  useEffect(()=>{
+    //      const bottomDiv = bottomRef?.current;
+    //      const topDiv = chatRef?.current;
 
-         const shouldAutoScroll = ()=>{
-             if(!hasinitialized && bottomDiv){
-                 setHasinitialized(true)
-                 return true
-             }
-             if(!topDiv){
-                return false
-             }
+    //      const shouldAutoScroll = ()=>{
+    //          if(!hasinitialized && bottomDiv){
+    //              setHasinitialized(true)
+    //              return true
+    //          }
+    //          if(!topDiv){
+    //             return false
+    //          }
 
-            const distanceFromBottom = topDiv.scrollHeight - topDiv.clientHeight - topDiv.scrollTop
-            return distanceFromBottom < 100
+    //         const distanceFromBottom = topDiv.scrollHeight - topDiv.clientHeight - topDiv.scrollTop
+    //         return distanceFromBottom < 100
 
-         }
+    //      }
 
-         if(shouldAutoScroll()){
-            useEffect(()=>{
-             bottomDiv?.scrollIntoView({ behavior: 'smooth' })
-            },[100])
-         }
-     },[bottomRef, chatRef, hasinitialized])
+    //      if(shouldAutoScroll()){
+    //         useEffect(()=>{
+    //          bottomDiv?.scrollIntoView({ behavior: 'smooth' })
+    //         },[100])
+    //      }
+    //  },[bottomRef, chatRef, hasinitialized])
 }
