@@ -1,6 +1,3 @@
-# Alfarnex project
-Get started commit of alfarnex startup agency website
-
 ## Getting Started
 
 ### Future Helps 
