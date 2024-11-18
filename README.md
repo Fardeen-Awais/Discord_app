@@ -57,6 +57,5 @@
 TODO: fix channel delete functionality
 
 ### Authors
-- Fardeen Founder of Alfarnex
-
+- Fardeen 
 
